@@ -278,12 +278,56 @@ title="Print to PDF"
     </ul>
   </div>
 </div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
 
     </div>
 </div>
 
 <!-- Table of contents -->
 <div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Copying and Modifying the Website
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copying-the-code">
+   Copying the code
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-the-website">
+   Running the website
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modifying-the-website">
+   Modifying the website
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+    </nav>
 </div>
     </div>
     <div class="article row">
@@ -295,6 +339,39 @@ title="Print to PDF"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Copying and Modifying the Website
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#copying-the-code">
+   Copying the code
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#running-the-website">
+   Running the website
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#modifying-the-website">
+   Modifying the website
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#conclusion">
+   Conclusion
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -306,16 +383,20 @@ title="Print to PDF"
 <h1>Copying and Modifying the Website<a class="headerlink" href="#copying-and-modifying-the-website" title="Permalink to this headline">#</a></h1>
 <p>While I have the website running for everyone to access, if you would like to run it locally,
 or modify any of the code, I have left it available to access.</p>
-<p>#Copying the code
-The website is located at: <code class="docutils literal notranslate"><span class="pre">/data/aneurysm/pandol75/DeepAneurysmWebsite</span></code>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="copying-the-code">
+<h1>Copying the code<a class="headerlink" href="#copying-the-code" title="Permalink to this headline">#</a></h1>
+<p>The website is located at: <code class="docutils literal notranslate"><span class="pre">/data/aneurysm/pandol75/DeepAneurysmWebsite</span></code>
 You can copy the code to your local repository by typing the command:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">aneurysm</span><span class="o">/</span><span class="n">pandol75</span><span class="o">/</span><span class="n">DeepAneurysmWebsite</span>
 </pre></div>
 </div>
 <p>At the moment, all of the necessary files are contained within this folder. There is no parts of the site that
 call upon files from other parts of the Lambda server. As such, you can transfer this to your local machine without issue.</p>
-<p>#Running the website
-To run the website, you need Streamlit installed. In your python environment, you can type:</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="running-the-website">
+<h1>Running the website<a class="headerlink" href="#running-the-website" title="Permalink to this headline">#</a></h1>
+<p>To run the website, you need Streamlit installed. In your python environment, you can type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">streamlit</span>
 </pre></div>
 </div>
@@ -332,10 +413,12 @@ struggles displaying the IP. So, to get around this, you should first run</p>
 <p>This will get you the IP address. The port will usually be <strong>8501</strong>, however if other instances of the
 site are currently running, it may be <strong>8502</strong> or <strong>8503</strong>, etc. So, examples of the full address
 would be:
-<strong><a class="reference external" href="http://10.240.37.18:8501/">http://10.240.37.18:8501/</a></strong>
-<strong><a class="reference external" href="http://10.240.37.18:8502/">http://10.240.37.18:8502/</a></strong></p>
-<p>#Modifying the website
-All of the unique code for the website is located in <code class="docutils literal notranslate"><span class="pre">app.py</span></code>. The other files in the folder
+<strong><a class="reference external" href="http://10.240.37.18:8501/">http://10.240.37.18:8501/</a></strong></p>
+<p><strong><a class="reference external" href="http://10.240.37.18:8502/">http://10.240.37.18:8502/</a></strong></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="modifying-the-website">
+<h1>Modifying the website<a class="headerlink" href="#modifying-the-website" title="Permalink to this headline">#</a></h1>
+<p>All of the unique code for the website is located in <code class="docutils literal notranslate"><span class="pre">app.py</span></code>. The other files in the folder
 come from fasterRCNN, and are used to help run Faster on the site. These could be called
 from another location, but they are included here, for ease-of-access. So, if you would
 like to make changes to the site, <code class="docutils literal notranslate"><span class="pre">app.py</span></code> should be all you touch.</p>
@@ -347,8 +430,10 @@ such as the Rowan logo, the informational video, and all of the sample images
 used for the models.</p>
 <p>There is also a README.txt file in the folder to provide similar info about
 the website.</p>
-<p>#Conclusion
-This should provide you with all the tools necessary to use and edit the DeepAneurysm
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="conclusion">
+<h1>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this headline">#</a></h1>
+<p>This should provide you with all the tools necessary to use and edit the DeepAneurysm
 Website. If you have any questions, reach out to me at <code class="docutils literal notranslate"><span class="pre">pandol75&#64;students.rowan.edu</span></code>, and
 I will do my best to get back to you and help out.</p>
 </section>
